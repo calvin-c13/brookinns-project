@@ -5,10 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#1DA1F2',
+        secondary: '#14171A',
+        accent: '#657786',
+      },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-    // ...
-  ],
+  plugins: [],
 }
