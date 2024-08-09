@@ -5,7 +5,7 @@ import backgroundImage from '../assets/homeBackgroundBlur.jpg';
 export default function Home() {
     return (
         <div className='flex flex-col'>
-            <div className='relative w-full h-auto bg-cover bg-center' style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <div className='relative w-full h-auto bg-cover bg-center' style={{ backgroundImage: `url(${backgroundImage})`}}>
                 {/* Blurred Background */}
                 <div className='absolute inset-0 backdrop-blur-lg backdrop-brightness-95'></div>
 
