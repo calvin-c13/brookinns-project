@@ -18,10 +18,10 @@ export default function Header() {
 
                 {/* Center: East Side and West Side */}
                 <div className='flex flex-col sm:flex-row flex-1 justify-center items-center space-y-2 sm:space-x-28 sm:space-y-0 w-1/2'>
-                    <Link to='/eastside'>
+                    <Link to='/east'>
                         <ul className='text-white font-semibold text-base sm:text-lg px-4 py-2 hover:opacity-85 uppercase'>East Side</ul>
                     </Link>
-                    <Link to='/westside'>
+                    <Link to='/west'>
                         <ul className='text-white font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 hover:opacity-85 uppercase'>West Side</ul>
                     </Link>
                 </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function WestSide() {
+export default function East() {
   return (
     <div>
-      WestSide
+      East
     </div>
   )
 }

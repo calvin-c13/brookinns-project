@@ -2,9 +2,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
-import EastSide from './pages/EastSide';
-import WestSide from './pages/WestSide';
+import East from './pages/East';
+import West from './pages/West';
 
 import Langmuir from './pages/Langmuir';
 import Benedict from './pages/Benedict';
@@ -64,72 +65,73 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
 
-        <Route path='/eastside' element={<EastSide />} />
+        <Route path='/east' element={<East />} />
         { /* East- H com*/}
-        <Route path='/eastside/langmuir' element={<Langmuir />} />
-        <Route path='/eastside/benedict' element={<Benedict />} />
-        <Route path='/eastside/james' element={<James />} />
+        <Route path='/east/langmuir' element={<Langmuir />} />
+        <Route path='/east/benedict' element={<Benedict />} />
+        <Route path='/east/james' element={<James />} />
 
         { /* East- Mendelsohn com*/}
-        <Route path='/eastside/ammann' element={<Ammann />} />
-        <Route path='/eastside/oneill' element={<Oneill />} />
-        <Route path='/eastside/irving' element={<Irving />} />
-        <Route path='/eastside/gray' element={<Gray />} />
+        <Route path='/east/ammann' element={<Ammann />} />
+        <Route path='/east/oneill' element={<Oneill />} />
+        <Route path='/east/irving' element={<Irving />} />
+        <Route path='/east/gray' element={<Gray />} />
 
         { /* East- Living learning com*/}
-        <Route path='/eastside/chavez' element={<Chavez />} />
-        <Route path='/eastside/tubman' element={<Tubman />} />
+        <Route path='/east/chavez' element={<Chavez />} />
+        <Route path='/east/tubman' element={<Tubman />} />
 
 
-        <Route path='/westside' element={<WestSide />} />
+        <Route path='/west' element={<West />} />
         { /* West- Living learning com*/}
-        <Route path='/westside/Lauterbur' element={<Lauterbur />} />
-        <Route path='/westside/yang' element={<Yang />} />
+        <Route path='/west/Lauterbur' element={<Lauterbur />} />
+        <Route path='/west/yang' element={<Yang />} />
 
         { /* West- Tabler com*/}
-        <Route path='/westside/chinn' element={<Chinn />} />
-        <Route path='/westside/douglass' element={<Douglass />} />
-        <Route path='/westside/dreiser' element={<Dreiser />} />
-        <Route path='/westside/hand' element={<Hand />} />
-        <Route path='/westside/toscanini' element={<Toscanini />} />
+        <Route path='/west/chinn' element={<Chinn />} />
+        <Route path='/west/douglass' element={<Douglass />} />
+        <Route path='/west/dreiser' element={<Dreiser />} />
+        <Route path='/west/hand' element={<Hand />} />
+        <Route path='/west/toscanini' element={<Toscanini />} />
 
         { /* West- Roosevelt com*/}
-        <Route path='/westside/wagner' element={<Wagner />} />
-        <Route path='/westside/stimson' element={<Stimson />} />
-        <Route path='/westside/keller' element={<Keller />} />
-        <Route path='/westside/greeley' element={<Greeley />} />
+        <Route path='/west/wagner' element={<Wagner />} />
+        <Route path='/west/stimson' element={<Stimson />} />
+        <Route path='/west/keller' element={<Keller />} />
+        <Route path='/west/greeley' element={<Greeley />} />
 
         { /* West- Kelly com*/}
-        <Route path='/westside/baruch' element={<Baruch />} />
-        <Route path='/westside/dewey' element={<Dewey />} />
-        <Route path='/westside/eisenhower' element={<Eisenhower />} />
-        <Route path='/westside/hamilton' element={<Hamilton />} />
-        <Route path='/westside/schick' element={<Schick />} />
+        <Route path='/west/baruch' element={<Baruch />} />
+        <Route path='/west/dewey' element={<Dewey />} />
+        <Route path='/west/eisenhower' element={<Eisenhower />} />
+        <Route path='/west/hamilton' element={<Hamilton />} />
+        <Route path='/west/schick' element={<Schick />} />
 
         { /* West- Roth com*/}
-        <Route path='/westside/cardozo' element={<Cardozo />} />
-        <Route path='/westside/gershwin' element={<Gershwin />} />
-        <Route path='/westside/hendrix' element={<Hendrix />} />
-        <Route path='/westside/mount' element={<Mount />} />
-        <Route path='/westside/whitman' element={<Whitman />} />
+        <Route path='/west/cardozo' element={<Cardozo />} />
+        <Route path='/west/gershwin' element={<Gershwin />} />
+        <Route path='/west/hendrix' element={<Hendrix />} />
+        <Route path='/west/mount' element={<Mount />} />
+        <Route path='/west/whitman' element={<Whitman />} />
 
         { /* West- West apartments com*/}
-        <Route path='/westside/westA' element={<WestA />} />
-        <Route path='/westside/westB' element={<WestB />} />
-        <Route path='/westside/westC' element={<WestC />} />
-        <Route path='/westside/westD' element={<WestD />} />
-        <Route path='/westside/westE' element={<WestE />} />
-        <Route path='/westside/westF' element={<WestF />} />
-        <Route path='/westside/westJ' element={<WestJ />} />
-        <Route path='/westside/westK' element={<WestK />} />
+        <Route path='/west/westA' element={<WestA />} />
+        <Route path='/west/westB' element={<WestB />} />
+        <Route path='/west/westC' element={<WestC />} />
+        <Route path='/west/westD' element={<WestD />} />
+        <Route path='/west/westE' element={<WestE />} />
+        <Route path='/west/westF' element={<WestF />} />
+        <Route path='/west/westJ' element={<WestJ />} />
+        <Route path='/west/westK' element={<WestK />} />
 
         { /* West- Schomburg apartments com*/}
-        <Route path='/westside/schomburg' element={<Schomburg />} />
+        <Route path='/west/schomburg' element={<Schomburg />} />
 
         { /* West- Chapin apartments com*/}
-        <Route path='/westside/chapin' element={<Chapin />} />
+        <Route path='/west/chapin' element={<Chapin />} />
 
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
