@@ -4,58 +4,58 @@ import About from './pages/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import East from './pages/East';
-import West from './pages/West';
+import East from './pages/eastSide/East';
+import West from './pages/westSide/West';
 
-import Langmuir from './pages/Langmuir';
-import Benedict from './pages/Benedict';
-import James from './pages/James';
+import Langmuir from './pages/eastSide/Langmuir';
+import Benedict from './pages/eastSide/Benedict';
+import James from './pages/eastSide/James';
 
-import Ammann from './pages/Ammann';
-import Oneill from './pages/Oneill';
-import Irving from './pages/Irving';
-import Gray from './pages/Gray';
+import Ammann from './pages/eastSide/Ammann';
+import Oneill from './pages/eastSide/Oneill';
+import Irving from './pages/eastSide/Irving';
+import Gray from './pages/eastSide/Gray';
 
-import Chavez from './pages/Chavez';
-import Tubman from './pages/Tubman';
-import Lauterbur from './pages/Lauterbur';
-import Yang from './pages/Yang';
+import Chavez from './pages/eastSide/Chavez';
+import Tubman from './pages/eastSide/Tubman';
+import Lauterbur from './pages/westSide/Lauterbur';
+import Yang from './pages/westSide/Yang';
 
-import Chinn from './pages/Chinn';
-import Douglass from './pages/Douglass';
-import Dreiser from './pages/Dreiser';
-import Hand from './pages/Hand';
-import Toscanini from './pages/Toscanini';
+import Chinn from './pages/westSide/Chinn';
+import Douglass from './pages/westSide/Douglass';
+import Dreiser from './pages/westSide/Dreiser';
+import Hand from './pages/westSide/Hand';
+import Toscanini from './pages/westSide/Toscanini';
 
-import Wagner from './pages/Wagner';
-import Stimson from './pages/Stimson';
-import Keller from './pages/Keller';
-import Greeley from './pages/Greeley';
+import Wagner from './pages/westSide/Wagner';
+import Stimson from './pages/westSide/Stimson';
+import Keller from './pages/westSide/Keller';
+import Greeley from './pages/westSide/Greeley';
 
-import Baruch from './pages/Baruch';
-import Dewey from './pages/Dewey';
-import Eisenhower from './pages/Eisenhower';
-import Hamilton from './pages/Hamilton';
-import Schick from './pages/Schick';
+import Baruch from './pages/westSide/Baruch';
+import Dewey from './pages/westSide/Dewey';
+import Eisenhower from './pages/westSide/Eisenhower';
+import Hamilton from './pages/westSide/Hamilton';
+import Schick from './pages/westSide/Schick';
 
-import Cardozo from './pages/Cardozo';
-import Gershwin from './pages/Gershwin';
-import Hendrix from './pages/Hendrix';
-import Mount from './pages/Mount';
-import Whitman from './pages/Whitman';
+import Cardozo from './pages/westSide/Cardozo';
+import Gershwin from './pages/westSide/Gershwin';
+import Hendrix from './pages/westSide/Hendrix';
+import Mount from './pages/westSide/Mount';
+import Whitman from './pages/westSide/Whitman';
 
-import WestA from './pages/WestA';
-import WestB from './pages/WestB';
-import WestC from './pages/WestC';
-import WestD from './pages/WestD';
-import WestE from './pages/WestE';
-import WestF from './pages/WestF';
-import WestJ from './pages/WestJ';
-import WestK from './pages/WestK';
+import WestA from './pages/westSide/WestA';
+import WestB from './pages/westSide/WestB';
+import WestC from './pages/westSide/WestC';
+import WestD from './pages/westSide/WestD';
+import WestE from './pages/westSide/WestE';
+import WestF from './pages/westSide/WestF';
+import WestJ from './pages/westSide/WestJ';
+import WestK from './pages/westSide/WestK';
 
-import Schomburg from './pages/Schomburg';
+import Schomburg from './pages/westSide/Schomburg';
 
-import Chapin from './pages/Chapin';
+import Chapin from './pages/westSide/Chapin';
 
 export default function App() {
   return (
