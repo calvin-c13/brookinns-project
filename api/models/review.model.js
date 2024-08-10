@@ -3,72 +3,67 @@ import mongoose from "mongoose";
 const ReviewSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true,
         trim: true
     },
     major: {
         type: String,
-        required: true,
         trim: true
     },
     academicStanding: {
         type: String,
         enum: ['Freshman', 'Sophomore', 'Junior', 'Senior', 'Graduate'],
-        required: true
     },
     roomType: {
         type: String,
-        enum: ['Single', 'Double', 'Triple', 'Suite'],
-        required: true
+        enum: ['Single', 'Double', 'Triple'],
     },
     ac: {
         type: String,
-        enum: ['Yes', 'No', 'Central Air', 'Window Unit'],
-        required: true
+        enum: ['Yes', 'No'],
     },
     kitchen: {
-        type: Boolean,
-        required: true
+        type: String,
+        enum: ['Yes', 'No'],
     },
-    overallExperience: {
+    overall: {
         type: Number,
-        min: 1,
+        min: 0.5,
         max: 5,
         required: true
     },
     buildingQuality: {
         type: Number,
-        min: 1,
+        min: 0.5,
         max: 5,
         required: true
     },
     buildingAmenities: {
         type: Number,
-        min: 1,
+        min: 0.5,
         max: 5,
         required: true
     },
     location: {
         type: Number,
-        min: 1,
+        min: 0.5,
         max: 5,
         required: true
     },
     socialLife: {
         type: Number,
-        min: 1,
+        min: 0.5,
         max: 5,
         required: true
     },
     managementAndStaff: {
         type: Number,
-        min: 1,
+        min: 0.5,
         max: 5,
         required: true
     },
     wouldRecommend: {
         type: String,
-        enum: ['Yes', 'Neutral', 'No'],
+        enum: ['Highly likely', 'Likely', 'Neutral', 'Unlikely', 'Highly unlikely'],
         required: true
     },
     reviewText: {
