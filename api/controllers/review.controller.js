@@ -1,48 +1,64 @@
-import Review from '../models/review.model';
+import Review from "../models/review.model.js";
 import { errorHandler } from "../utils/error.js";
 
-
 // Get all reviews
-exports.getAllReviews = async (req, res) => {
+export const getAllReviews = async (req, res, next) => {
     try {
         const reviews = await Review.find();
-        res.json(reviews);
+        res.status(200).json(reviews);
     } catch (error) {
-        res.status(500).json({ message: 'Error fetching reviews', error });
+        next(errorHandler(500, "Error fetching reviews"));
     }
 };
 
-// Get reviews by side (east or west)
-exports.getReviewsBySide = async (req, res) => {
-    const side = req.params.side.toLowerCase(); // 'east' or 'west'
+// Get reviews by side (East or West)
+export const getReviewsBySide = async (req, res, next) => {
+    const { side } = req.params;
+
     try {
         const reviews = await Review.find({ side });
-        res.json(reviews);
+        res.status(200).json(reviews);
     } catch (error) {
-        res.status(500).json({ message: `Error fetching reviews for ${side} side`, error });
+        next(errorHandler(500, `Error fetching reviews for ${side} side`));
     }
 };
 
-// Get reviews by community on a specific side
-exports.getReviewsByCommunity = async (req, res) => {
-    const side = req.params.side.toLowerCase(); // 'east' or 'west'
-    const community = req.params.community.toLowerCase(); // e.g., 'h', 'mendelsohn'
+// Get reviews by community within a side
+export const getReviewsByCommunity = async (req, res, next) => {
+    const { side, community } = req.params;
+
     try {
         const reviews = await Review.find({ side, community });
-        res.json(reviews);
+        res.status(200).json(reviews);
     } catch (error) {
-        res.status(500).json({ message: `Error fetching reviews for ${community} on ${side} side`, error });
+        next(errorHandler(500, `Error fetching reviews for ${community} in ${side} side`));
+    }
+};
+
+// Get reviews by hall
+export const getReviewsByHall = async (req, res, next) => {
+    const { side, community, hall } = req.params;
+
+    try {
+        const reviews = await Review.find({ side, community, hall });
+
+        // Return an empty array if no reviews are found
+        if (!reviews.length) return res.status(200).json([]);
+
+        res.status(200).json(reviews);
+    } catch (error) {
+        next(errorHandler(500, `Error fetching reviews for ${hall} in ${community} on ${side} side`));
     }
 };
 
 // Create a new review
-exports.createReview = async (req, res) => {
-    const { side, community, dorm, name, major, academicStanding, roomType, ac, kitchen, overallExperience, buildingQuality, buildingAmenities, location, socialLife, managementAndStaff, recommend, reviewText } = req.body;
+export const createReview = async (req, res, next) => {
+    const { side, community, hall, name, major, academicStanding, roomType, ac, kitchen, overallExperience, buildingQuality, buildingAmenities, location, socialLife, managementAndStaff, recommend, reviewText } = req.body;
 
     const newReview = new Review({
         side,
         community,
-        dorm,
+        hall,
         name,
         major,
         academicStanding,
@@ -63,6 +79,6 @@ exports.createReview = async (req, res) => {
         const savedReview = await newReview.save();
         res.status(201).json(savedReview);
     } catch (error) {
-        res.status(500).json({ message: 'Error creating review', error });
+        next(errorHandler(500, "Error creating new review"));
     }
 };

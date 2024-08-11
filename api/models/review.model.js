@@ -73,10 +73,21 @@ const ReviewSchema = new mongoose.Schema({
     reviewText: {
         type: String,
         trim: true
+    },
+    side: { // East or West side
+        type: String,
+        enum: ['East', 'West'],
+    },
+    community: { // Specific community name
+        type: String,
+        trim: true
+    },
+    hall: { // Specific hall name
+        type: String,
+        trim: true
     }
 }, { timestamps: true });
 
-// Create the model from the schema
 const Review = mongoose.model('Review', ReviewSchema);
 
 export default Review;
