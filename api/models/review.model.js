@@ -13,6 +13,10 @@ const ReviewSchema = new mongoose.Schema({
         type: String,
         enum: ['Freshman', 'Sophomore', 'Junior', 'Senior', 'Graduate'],
     },
+    roomNumber: {
+        type: String,
+        trim: true
+    },
     roomType: {
         type: String,
         enum: ['Single', 'Double', 'Triple'],
