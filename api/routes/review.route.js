@@ -7,6 +7,6 @@ router.get('/', getAllReviews);
 router.get('/:side', getReviewsBySide);
 router.get('/:side/:community', getReviewsByCommunity);
 router.get('/:side/:community/:hall', getReviewsByHall);
-router.post('/', createReview);
+router.post('/create', createReview);
 
 export default router;

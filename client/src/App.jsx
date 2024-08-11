@@ -6,38 +6,49 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import East from './pages/eastSide/East';
 import West from './pages/westSide/West';
-import { ReviewProvider } from './context/ReviewContext'; // Import ReviewProvider from context
+import { ReviewProvider } from './context/ReviewContext';
 
 const eastSidePages = [
-    'Langmuir', 'Benedict', 'James',
-    'Ammann', 'Oneill', 'Irving', 'Gray',
-    'Chavez', 'Tubman'
+    'Langmuir', 'Benedict', 'James', //H com
+    'Ammann', 'Oneill', 'Irving', 'Gray', //Mendelsohn
+    'Chavez', 'Tubman' //Living learning
 ];
 
 const westSidePages = [
-    'Lauterbur', 'Yang',
-    'Chinn', 'Douglass', 'Dreiser', 'Hand', 'Toscanini',
-    'Wagner', 'Stimson', 'Keller', 'Greeley',
-    'Baruch', 'Dewey', 'Eisenhower', 'Hamilton', 'Schick',
-    'Cardozo', 'Gershwin', 'Hendrix', 'Mount', 'Whitman',
-    'WestA', 'WestB', 'WestC', 'WestD', 'WestE', 'WestF', 'WestJ', 'WestK',
-    'Schomburg', 'Chapin'
+    'Lauterbur', 'Yang', //Living learning
+    'Chinn', 'Douglass', 'Dreiser', 'Hand', 'Toscanini', //Tabler
+    'Wagner', 'Stimson', 'Keller', 'Greeley', //Roosevelt
+    'Baruch', 'Dewey', 'Eisenhower', 'Hamilton', 'Schick', //Kelly
+    'Cardozo', 'Gershwin', 'Hendrix', 'Mount', 'Whitman', //Roth
+    'WestA', 'WestB', 'WestC', 'WestD', 'WestE', 'WestF', 'WestJ', 'WestK', //West Apartments
+    'Schomburg', //Schomburg apartments
+    'Chapin' //Chapin apartments
 ];
 
-// Import page components lazily
-const importPageComponent = (side, page) => {
-    return React.lazy(() => import(`./pages/${side}/${page}`));
+// Lazy loading 
+const importPageComponent = (side, page) => React.lazy(() => import(`./pages/${side}/${page}`));
+const importReviewFormComponent = (side, page) => {
+    const capitalizedPage = page.charAt(0).toUpperCase() + page.slice(1);
+    return React.lazy(() => import(`./pages/${side}Reviews/${capitalizedPage}-review`));
 };
 
-// Import review form components lazily
-const importReviewFormComponent = (side, page) => {
-    return React.lazy(() => import(`./pages/${side}/${page}-review`));
-};
+
+// Fallback loading
+const Loading = () => (
+    <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        fontSize: '24px',
+        fontWeight: 'bold'
+    }}>Loading...</div>
+);
 
 export default function App() {
     return (
         <BrowserRouter>
-            <ReviewProvider> {/* Wrap the application in ReviewProvider */}
+            <ReviewProvider>
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -45,7 +56,7 @@ export default function App() {
                     <Route path="/east" element={<East />} />
                     <Route path="/west" element={<West />} />
 
-                    {/* Routes for east side pages */}
+                    {/* East Side Pages */}
                     {eastSidePages.map(page => {
                         const Component = importPageComponent('eastSide', page);
                         const ReviewFormComponent = importReviewFormComponent('eastSide', page.toLowerCase());
@@ -53,31 +64,17 @@ export default function App() {
                             <React.Fragment key={page}>
                                 <Route
                                     path={`/east/${page.toLowerCase()}`}
-                                    element={<React.Suspense fallback={<div style={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        height: '100vh',
-                                        fontSize: '24px',
-                                        fontWeight: 'bold'
-                                    }}>Loading...</div>}><Component /></React.Suspense>}
+                                    element={<React.Suspense fallback={<Loading />}><Component /></React.Suspense>}
                                 />
                                 <Route
                                     path={`/east/${page.toLowerCase()}/add-review`}
-                                    element={<React.Suspense fallback={<div style={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        height: '100vh',
-                                        fontSize: '24px',
-                                        fontWeight: 'bold'
-                                    }}>Loading...</div>}><ReviewFormComponent /></React.Suspense>}
+                                    element={<React.Suspense fallback={<Loading />}><ReviewFormComponent /></React.Suspense>}
                                 />
                             </React.Fragment>
                         );
                     })}
 
-                    {/* Routes for west side pages */}
+                    {/* West Side Pages */}
                     {westSidePages.map(page => {
                         const Component = importPageComponent('westSide', page);
                         const ReviewFormComponent = importReviewFormComponent('westSide', page.toLowerCase());
@@ -85,32 +82,18 @@ export default function App() {
                             <React.Fragment key={page}>
                                 <Route
                                     path={`/west/${page.toLowerCase()}`}
-                                    element={<React.Suspense fallback={<div style={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        height: '100vh',
-                                        fontSize: '24px',
-                                        fontWeight: 'bold'
-                                    }}>Loading...</div>}><Component /></React.Suspense>}
+                                    element={<React.Suspense fallback={<Loading />}><Component /></React.Suspense>}
                                 />
                                 <Route
                                     path={`/west/${page.toLowerCase()}/add-review`}
-                                    element={<React.Suspense fallback={<div style={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        height: '100vh',
-                                        fontSize: '24px',
-                                        fontWeight: 'bold'
-                                    }}>Loading...</div>}><ReviewFormComponent /></React.Suspense>}
+                                    element={<React.Suspense fallback={<Loading />}><ReviewFormComponent /></React.Suspense>}
                                 />
                             </React.Fragment>
                         );
                     })}
                 </Routes>
                 <Footer />
-            </ReviewProvider> {/* End ReviewProvider */}
+            </ReviewProvider>
         </BrowserRouter>
     );
 }

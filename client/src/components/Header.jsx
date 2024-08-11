@@ -30,7 +30,7 @@ export default function Header() {
                 <div className='w-1/4 flex justify-center sm:justify-end'>
                     <ul className='flex items-center hidden sm:inline'>
                         <Link to='/about'>
-                            <li className='text-white font-semibold text-base sm:text-lg px-4 py-2 hover:opacity-85 uppercase'>About</li>
+                            <li className='text-white font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 hover:opacity-85 uppercase'>About</li>
                         </Link>
                     </ul>
                 </div>
