@@ -4,10 +4,10 @@ import oneLineWhiteLogo from '../assets/headerNameWhite.png';
 
 const commonStyles = 'text-white w-full sm:w-1/4';
 
-export default function Header() {
+export default function Footer() {
     return (
-        <footer>
-            <div className='flex flex-col sm:flex-row items-center max-w-screen-xxl mx-auto py-4 px-4 sm:px-8 bg-black'>
+        <footer className='bg-black'>
+            <div className='flex flex-col sm:flex-row items-center max-w-screen-xxl mx-auto py-4 px-4 sm:px-8'>
                 {/* Left: Logos */}
                 <div className='flex flex-col sm:flex-row items-center w-full sm:w-1/4 mb-4 sm:mb-0'>
                     <Link to='/'>
