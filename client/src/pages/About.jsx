@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import calvinPhoto from '../assets/calvinPhoto.png';
+import jadePhoto from '../assets/jadePhoto.png';
+import noPhoto from '../assets/noPhoto.png';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function About() {
@@ -11,29 +14,68 @@ export default function About() {
                     Our goal is to provide a convenient and reliable resource for anyone interested in exploring the features and
                     atmosphere of the dorms at Stony Brook without the need to search through Reddit or other online sources.
                 </p>
-                <Link to={`mailto:brookinns.sbu@gmail.com?subject=Feedback for BrookInns`} className='bg-red-700 text-white text-center p-2 sm:p-3 uppercase rounded-lg hover:opacity-95 flex-1'>
+                <Link to={`mailto:brookinns.sbu@gmail.com?subject=Feedback for BrookInns`} className='bg-red-700 text-white text-center p-3 sm:p-4 uppercase rounded-lg hover:opacity-90 flex-1'>
                     Contact Us
                 </Link>
             </div>
 
             {/* Contact cards */}
-            <div className='bg-white border-2 border-gray-300 shadow-sm hover:shadow-lg transition-shadow rounded-lg flex w-1/2 sm:w-1/2 mt-8'>
-                <img src= alt='Calvin Chau photo' className='w-48 h-48 object-cover rounded-lg -ml-0.5' />
-                <div className='p-6 flex flex-col justify-center'>
-                    <p className='text-2xl font-bold'>Calvin Chau</p>
-                    <p className='text-gray-600 italic text-lg'>Major: Computer Science</p>
-                    <p className='text-gray-600 mt-4'>Socials:</p>
-                    <div className='flex space-x-4 mt-2'>
-                        {/* Social Icons */}
-                        <a href="https://www.linkedin.com/in/calvin-chau-6a1ab3272/" target='_blank' rel='noopener noreferrer' className='text-gray-800 hover:text-gray-300 transition-colors duration-300 ease-in-out'>
-                            <FaLinkedin size={24} />
-                        </a>
-                        <a href="https://github.com/calvin-c13" target='_blank' rel='noopener noreferrer' className='text-gray-800 hover:text-gray-300 transition-colors duration-300 ease-in-out'>
-                            <FaGithub size={24} />
-                        </a>
+            <div className='flex flex-col sm:flex-row justify-center items-center sm:space-x-40 mt-10 p-5'>
+                <div className='bg-white border-2 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
+                    <img src={calvinPhoto} alt='Calvin Chau photo' className='w-full h-3/5 object-cover rounded-t-lg' />
+                    <div className='flex flex-col items-center p-4 h-1/2 justify-center text-center'>
+                        <p className='text-xl font-bold'>Calvin Chau</p>
+                        <p className='text-xs text-gray-600 italic text-center mt-1'>Major: Computer Science</p>
+                        <p className='text-gray-600 mt-4'>Socials:</p>
+                        <div className='flex space-x-4 mt-2'>
+                            {/* Social Icons */}
+                            <a href="https://www.linkedin.com/in/calvin-chau-6a1ab3272/" target='_blank' rel='noopener noreferrer' className='text-gray-800 hover:text-gray-300 transition-colors duration-300 ease-in-out'>
+                                <FaLinkedin size={24} />
+                            </a>
+                            <a href="https://github.com/calvin-c13" target='_blank' rel='noopener noreferrer' className='text-gray-800 hover:text-gray-300 transition-colors duration-300 ease-in-out'>
+                                <FaGithub size={24} />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='bg-white border-2 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
+                    <img src={jadePhoto} alt='Jade Fang photo' className='w-full h-3/5 object-cover rounded-t-lg' />
+                    <div className='flex flex-col items-center p-4 h-1/2 justify-center text-center'>
+                        <p className='text-xl font-bold'>Jade Fang</p>
+                        <p className='text-xs text-gray-600 italic text-center mt-1'>Major: Economics & Pol Sci</p>
+                        <p className='text-gray-600 mt-4'>Socials:</p>
+                        <div className='flex space-x-4 mt-2'>
+                            {/* Social Icons */}
+                            <a href="https://www.linkedin.com/in/jade-fang-5b41702a6/" target='_blank' rel='noopener noreferrer' className='text-gray-800 hover:text-gray-300 transition-colors duration-300 ease-in-out'>
+                                <FaLinkedin size={24} />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='bg-white border-2 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
+                    <img src={noPhoto} alt='Jeremy Alleyne photo' className='w-full h-3/5 object-cover rounded-t-lg' />
+                    <div className='flex flex-col items-center p-4 h-1/2 justify-center text-center'>
+                        <p className='text-xl font-bold'>Jeremy Alleyne</p>
+                        <p className='text-xs text-gray-600 italic mt-1'>Major: Accounting (SJU)</p>
+                        <p className='text-gray-600 mt-4'>Socials:</p>
+                        <div className='flex space-x-4 mt-2'>
+                            {/* Social Icons */}
+                            <a href="https://www.linkedin.com/in/jeremy-alleyne-b165b3260/" target='_blank' rel='noopener noreferrer' className='text-gray-800 hover:text-gray-300 transition-colors duration-300 ease-in-out'>
+                                <FaLinkedin size={24} />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
+
+
+
+
     );
 }
