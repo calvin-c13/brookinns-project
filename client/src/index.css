@@ -3,5 +3,29 @@
 @tailwind utilities;
 
 body {
-    background-color: rgb(255, 255, 255); /* Default background color */
+    background-color: rgb(255, 255, 255);
+}
+
+.header-link {
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+.header-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #D52027;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.header-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }

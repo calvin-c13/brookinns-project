@@ -19,18 +19,18 @@ export default function Header() {
                 {/* Center: East Side and West Side */}
                 <div className='flex flex-col sm:flex-row flex-1 justify-center items-center text-center space-y-2 sm:space-x-28 sm:space-y-0 w-1/2'>
                     <Link to='/east'>
-                        <ul className='text-white font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 hover:opacity-85 uppercase'>East Side</ul>
+                        <ul className='header-link text-white font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase header-link'>East Side</ul>
                     </Link>
                     <Link to='/west'>
-                        <ul className='text-white font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 hover:opacity-85 uppercase'>West Side</ul>
+                        <ul className='header-link text-white font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>West Side</ul>
                     </Link>
                 </div>
 
                 {/* Right: About */}
                 <div className='w-1/4 flex justify-center sm:justify-end'>
-                    <ul className='flex items-center hidden sm:inline'>
+                    <ul className='flex items-center sm:inline'>
                         <Link to='/about'>
-                            <li className='text-white font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 hover:opacity-85 uppercase'>About</li>
+                            <li className='header-link text-white font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>About</li>
                         </Link>
                     </ul>
                 </div>

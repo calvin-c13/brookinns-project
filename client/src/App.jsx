@@ -4,8 +4,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import East from './pages/eastSide/East';
-import West from './pages/westSide/West';
+import East from './pages/East';
+import West from './pages/West';
 import { ReviewProvider } from './context/ReviewContext';
 
 const eastSidePages = [
@@ -20,7 +20,7 @@ const westSidePages = [
     'Wagner', 'Stimson', 'Keller', 'Greeley', //Roosevelt
     'Baruch', 'Dewey', 'Eisenhower', 'Hamilton', 'Schick', //Kelly
     'Cardozo', 'Gershwin', 'Hendrix', 'Mount', 'Whitman', //Roth
-    'WestA', 'WestB', 'WestC', 'WestD', 'WestE', 'WestF', 'WestJ', 'WestK', //West Apartments
+    'WestA', 'WestB', 'WestC', 'WestD', 'WestE', 'WestF', 'WestG', 'WestH', 'WestI', 'WestJ', 'WestK', //West Apartments
     'Schomburg', //Schomburg apartments
     'Chapin' //Chapin apartments
 ];
