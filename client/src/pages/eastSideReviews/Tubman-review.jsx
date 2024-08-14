@@ -2,16 +2,14 @@ import React from 'react';
 import ReviewForm from '../../components/ReviewForm';
 
 const Tubman = () => {
-    // The side and community information is known based on the component
     const side = 'East';
-    const community = 'Tubman';
+    const community = 'Living learning';
+    const hall = 'Tubman';
 
-    // Assuming you have a review form component
     return (
         <div>
-            <h1>{community}</h1>
-            {/* Pass side and community as props to the ReviewForm component */}
-            <ReviewForm side={side} community={community} />
+            <h1>{`Add a review for ${hall} Hall`}</h1>
+            <ReviewForm side={side} community={community} hall={hall} />
         </div>
     );
 };

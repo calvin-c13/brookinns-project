@@ -1,0 +1,17 @@
+import React from 'react';
+import ReviewForm from '../../components/ReviewForm';
+
+const Schomburg = () => {
+    const side = 'West';
+    const community = 'Schomburg apartments';
+    const hall = 'Schomburg';
+
+    return (
+        <div>
+            <h1>{`Add a review for ${hall} Hall`}</h1>
+            <ReviewForm side={side} community={community} hall={hall} />
+        </div>
+    );
+};
+
+export default Schomburg;

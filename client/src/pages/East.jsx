@@ -32,7 +32,7 @@ export default function East() {
             </Link>
 
 
-            {/*Living learnin*/}
+            {/*Living learning*/}
             <Link to='/east/chavez'>
                 <li className='text-black font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>Chavez</li>
             </Link>

@@ -45,8 +45,24 @@ export default function West() {
                 <li className='text-black font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>Greeley</li>
             </Link>
 
-
             {/*Kelly*/}
+            <Link to='/west/baruch'>
+                <li className='text-black font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>Baruch</li>
+            </Link>
+            <Link to='/west/dewey'>
+                <li className='text-black font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>Dewey</li>
+            </Link>
+            <Link to='/west/eisenhower'>
+                <li className='text-black font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>Eisenhower</li>
+            </Link>
+            <Link to='/west/hamilton'>
+                <li className='text-black font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>Hamilton</li>
+            </Link>
+            <Link to='/west/schick'>
+                <li className='text-black font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>Schick</li>
+            </Link>
+
+            {/*Roth*/}
             <Link to='/west/cardozo'>
                 <li className='text-black font-semibold text-base sm:text-lg px-4 py-2 pb-4 sm:pb-0 uppercase'>Cardozo</li>
             </Link>

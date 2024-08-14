@@ -1,6 +1,18 @@
 import mongoose from "mongoose";
 
 const ReviewSchema = new mongoose.Schema({
+    side: { // East or West side
+        type: String,
+        enum: ['East', 'West'],
+    },
+    community: { // Specific community name
+        type: String,
+        trim: true
+    },
+    hall: { // Specific hall name
+        type: String,
+        trim: true
+    },
     name: {
         type: String,
         trim: true
@@ -71,18 +83,6 @@ const ReviewSchema = new mongoose.Schema({
         required: true
     },
     reviewText: {
-        type: String,
-        trim: true
-    },
-    side: { // East or West side
-        type: String,
-        enum: ['East', 'West'],
-    },
-    community: { // Specific community name
-        type: String,
-        trim: true
-    },
-    hall: { // Specific hall name
         type: String,
         trim: true
     }
