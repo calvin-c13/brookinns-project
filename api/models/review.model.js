@@ -1,25 +1,37 @@
 import mongoose from "mongoose";
 
+// Capitalize the first letter of a string
+function capitalizeFirstLetter(value) {
+    if (typeof value !== 'string') return '';
+    return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+}
+
 const ReviewSchema = new mongoose.Schema({
     side: { // East or West side
         type: String,
         enum: ['East', 'West'],
+        set: capitalizeFirstLetter,
+        lowercase: true
     },
     community: { // Specific community name
         type: String,
-        trim: true
+        trim: true,
+        lowercase: true
     },
     hall: { // Specific hall name
         type: String,
-        trim: true
+        trim: true,
+        lowercase: true
     },
     name: {
         type: String,
-        trim: true
+        trim: true,
+        set: capitalizeFirstLetter
     },
     major: {
         type: String,
-        trim: true
+        trim: true,
+        set: capitalizeFirstLetter
     },
     academicStanding: {
         type: String,
@@ -41,6 +53,7 @@ const ReviewSchema = new mongoose.Schema({
         type: String,
         enum: ['Yes', 'No'],
     },
+    //required
     overall: {
         type: Number,
         min: 0.5,

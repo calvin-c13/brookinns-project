@@ -3,7 +3,7 @@ import { errorHandler } from "../utils/error.js";
 
 // Create a new review
 export const createReview = async (req, res, next) => {
-    const { side, community, hall, name, major, academicStanding, roomType, ac, kitchen, overallExperience, buildingQuality, buildingAmenities, location, socialLife, managementAndStaff, recommend, reviewText } = req.body;
+    const { side, community, hall, name, major, academicStanding, roomNumber, ac, kitchen, overall, buildingQuality, buildingAmenities, location, socialLife, managementAndStaff, wouldRecommend, reviewText } = req.body;
 
     const newReview = new Review({
         side,
@@ -12,16 +12,16 @@ export const createReview = async (req, res, next) => {
         name,
         major,
         academicStanding,
-        roomType,
+        roomNumber,
         ac,
         kitchen,
-        overallExperience,
+        overall,
         buildingQuality,
         buildingAmenities,
         location,
         socialLife,
         managementAndStaff,
-        recommend,
+        wouldRecommend,
         reviewText
     });
 
@@ -29,7 +29,8 @@ export const createReview = async (req, res, next) => {
         const savedReview = await newReview.save();
         res.status(201).json(savedReview);
     } catch (error) {
-        next(errorHandler(500, "Error creating new review"));
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
