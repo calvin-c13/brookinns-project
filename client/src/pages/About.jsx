@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import calvinPhoto from '../assets/calvinPhoto.png';
-import jadePhoto from '../assets/jadePhoto.png';
-import noPhoto from '../assets/noPhoto.png';
+import calvinPhoto from '../assets/headshots/calvinPhoto.png';
+import jadePhoto from '../assets/headshots/jadePhoto.png';
+import noPhoto from '../assets/headshots/noPhoto.png';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function About() {

@@ -1,6 +1,6 @@
 import React from 'react';
-import fullLogoFrontPage from '../assets/fullLogoFrontPage.png';
-import backgroundImage from '../assets/homeBackgroundBlur.jpg';
+import fullLogoFrontPage from '../assets/logos/fullLogoFrontPage.png';
+import backgroundImage from '../assets/logos/homeBackgroundBlur.jpg';
 
 export default function Home() {
     return (

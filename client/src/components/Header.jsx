@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import headerHouseLogo from '../assets/homePageLogo.png';
-import oneLineWhiteLogo from '../assets/headerNameWhite.png';
+import headerHouseLogo from '../assets/logos/homePageLogo.png';
+import oneLineWhiteLogo from '../assets/logos/headerNameWhite.png';
 
 export default function Header() {
     return (

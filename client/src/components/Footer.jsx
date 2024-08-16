@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import headerHouseLogo from '../assets/homePageLogo.png';
-import oneLineWhiteLogo from '../assets/headerNameWhite.png';
+import headerHouseLogo from '../assets/logos/homePageLogo.png';
+import oneLineWhiteLogo from '../assets/logos/headerNameWhite.png';
 
 const commonStyles = 'text-white w-full sm:w-1/4';
 
