@@ -21,7 +21,7 @@ export default function About() {
 
             {/* Contact cards */}
             <div className='flex flex-col sm:flex-row justify-center items-center sm:space-x-40 mt-10 p-5'>
-                <div className='bg-white border-2 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
+                <div className='bg-white border-1 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
                     <img src={calvinPhoto} alt='Calvin Chau photo' className='w-full h-3/5 object-cover rounded-t-lg' />
                     <div className='flex flex-col items-center p-4 h-1/2 justify-center text-center'>
                         <p className='text-xl font-bold'>Calvin Chau</p>
@@ -39,7 +39,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className='bg-white border-2 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
+                <div className='bg-white border-1 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
                     <img src={jadePhoto} alt='Jade Fang photo' className='w-full h-3/5 object-cover rounded-t-lg' />
                     <div className='flex flex-col items-center p-4 h-1/2 justify-center text-center'>
                         <p className='text-xl font-bold'>Jade Fang</p>
@@ -54,7 +54,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className='bg-white border-2 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
+                <div className='bg-white border-1 border-gray-100 shadow-md hover:shadow-xl transition-shadow rounded-lg flex flex-col max-w-[200px] h-[400px] mb-10 sm:mb-0'>
                     <img src={noPhoto} alt='Jeremy Alleyne photo' className='w-full h-3/5 object-cover rounded-t-lg' />
                     <div className='flex flex-col items-center p-4 h-1/2 justify-center text-center'>
                         <p className='text-xl font-bold'>Jeremy Alleyne</p>
