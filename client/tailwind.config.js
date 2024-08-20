@@ -19,6 +19,10 @@ export default {
         '128': '32rem',
         '144': '36rem',
       },
+      height: {
+        'h-16rem': '16rem',
+        'h-20rem': '20rem',
+      },
     },
   },
   plugins: [],

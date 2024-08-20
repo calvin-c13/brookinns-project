@@ -23,19 +23,22 @@ export default function East() {
             {/*H community*/}
             <DormMinicard
                 to='/east/langmuir'
-                name='Langmuir'
+                name='Langmuir Hall'
+                community='H Community'
                 image={langmuirX}
                 rating='Insert Rating Here'
             />
             <DormMinicard
                 to='/east/benedict'
-                name='Benendict'
+                name='Benedict Hall'
+                community='H Community'
                 image={noPhotoExterior}
                 rating='Insert Rating Here'
             />
             <DormMinicard
                 to='/east/james'
-                name='James'
+                name='James Hall'
+                community='H Community'
                 image={jamesX}
                 rating='Insert Rating Here'
             />
@@ -44,25 +47,29 @@ export default function East() {
             {/*Mendelsohn*/}
             <DormMinicard
                 to='/east/ammann'
-                name='Ammann'
+                name='Ammann Hall'
+                community='Mendelsohn Community'
                 image={ammannX}
                 rating='Insert Rating Here'
             />
             <DormMinicard
                 to='/east/oneill'
-                name='Oneill'
+                name='O&apos;neill Hall'
+                community='Mendelsohn Community'
                 image={noPhotoExterior}
                 rating='Insert Rating Here'
             />
             <DormMinicard
                 to='/east/irving'
-                name='Irving'
+                name='Irving Hall'
+                community='Mendelsohn Community'
                 image={irvingX}
                 rating='Insert Rating Here'
             />
             <DormMinicard
                 to='/east/gray'
-                name='Gray'
+                name='Gray Hall'
+                community='Mendelsohn Community'
                 image={grayX}
                 rating='Insert Rating Here'
             />
@@ -71,13 +78,15 @@ export default function East() {
             {/*Living learning*/}
             <DormMinicard
                 to='/east/chavez'
-                name='Chavez'
+                name='Chavez Hall'
+                community='Living Learning Community'
                 image={chavezX}
                 rating='Insert Rating Here'
             />
             <DormMinicard
                 to='/east/tubman'
-                name='Tubman'
+                name='Tubman Hall'
+                community='Living Learning Community'
                 image={tubmanX}
                 rating='Insert Rating Here'
             />

@@ -23,6 +23,7 @@ export default function Home() {
 
             <div className='flex flex-col md:flex-row md:space-x-4 py-8 font-semibold text-xl'>
                 <ul className='w-full md:w-1/3 text-center'>Most Reviewed</ul>
+                
                 <ul className='w-full md:w-1/3 text-center'>Highest Reviewed</ul>
                 <ul className='w-full md:w-1/3 text-center'>Lowest Reviewed</ul>
             </div>
