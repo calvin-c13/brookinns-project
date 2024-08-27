@@ -15,8 +15,8 @@ mongoose.connect(process.env.MONGO)
         console.log(err);
     });
 
-app.listen(5173, () => {
-    console.log('Server is running on port 5173');
+app.listen(5174, () => {
+    console.log('Server is running on port 5174');
 });
 
 app.use('/api/reviews', reviewRouter);
