@@ -64,7 +64,7 @@ const AddReview = ({ side, community, hall }) => {
         2: 'A decent walk to class, but far from anywhere else.',
         3: 'Average location; decent access to campus and key spots.',
         4: 'Convenient location; close to campus and key spots',
-        5: 'Prime location; very close to campus and everything you need'
+        5: 'Prime location; very close to campus and everything I need'
     };
     
 
