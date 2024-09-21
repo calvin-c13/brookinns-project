@@ -29,7 +29,7 @@ const westSidePages = [
 const importPageComponent = (side, page) => React.lazy(() => import(`./pages/${side}/${page}`));
 const importReviewFormComponent = (side, page) => {
     const capitalizedPage = page.charAt(0).toUpperCase() + page.slice(1);
-    return React.lazy(()=>import(/* @vite-ignore */ `./pages/${side}Reviews/${capitalizedPage}-review`));
+    return React.lazy(() => import(`./pages/${side}Reviews/${capitalizedPage}-review`));
 };
 
 // Fallback loading
