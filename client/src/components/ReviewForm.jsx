@@ -70,7 +70,7 @@ const AddReview = ({ side, community, hall }) => {
 
     const socialLifeDescriptions = {
         1: 'No social life',
-        2: 'Limited social activities',
+        2: 'Limited social activities and events',
         3: 'Average social life',
         4: 'Active social scene',
         5: 'Great social atmosphere'
